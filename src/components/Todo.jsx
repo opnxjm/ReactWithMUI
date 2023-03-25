@@ -5,17 +5,17 @@ import{ Box, Typography, Modal, TextField, Button} from "@mui/material";
 function Todo(){
     //state of modal
     const [open, setOpen] = useState(false);
+
     //Modal Function
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
     //state for validation
     const [todoInput, setTodoInput] = useState("");
     const [todoError, settodoError] = useState(true);
+
     const [todo, setTodo] = useState([]);
-    
-    
-    
-    
+
     //handle input change
     function handleInput(e){
         setTodoInput(e.target.value);
@@ -25,7 +25,6 @@ function Todo(){
             settodoError(false);
         }
     }
-    
     //handle add button
     function handleAdd(){
         setTodo([...todo, todoInput]);
@@ -38,7 +37,6 @@ function Todo(){
         // }
         return(
             <>
-       {/* <div> */}
             <Box sx={{margin:"20px"}}>
                 <div style={wrapperHeaderStyle}>
                     <div>
@@ -62,9 +60,6 @@ function Todo(){
                             />
                             );
                         })}
-                    {/* {todo.map((item)=>{
-                        return <CardList task={item}/>
-                    })} */}
                 </Box>
                 <hr style={horizontalStyle} />
             </Box>
@@ -91,8 +86,7 @@ function Todo(){
                             Add
                         </Button>
                     </Box>
-                </Modal>
-        {/* </div> */}
+            </Modal>
         </>
     );
 }
