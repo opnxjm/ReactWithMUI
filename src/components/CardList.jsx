@@ -21,7 +21,6 @@ function CardList({todo, setState, state}){
 //         </div>
 //     );
 // }
-export default CardList;
 const wrapperStyle = {
     padding: "10px 20px",
     background: "#fefffe",
@@ -35,3 +34,4 @@ const wrapperStyle = {
     justifyContent: "space-between",
     boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
 };
+export default CardList;
